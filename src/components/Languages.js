@@ -46,8 +46,7 @@ export const Languages = () => {
 
   return (
     <section 
-      className="skill mt-5" 
-      id="skills" 
+      className="skill mt-5" id="languages" 
       onMouseEnter={() => setIsHovered(true)} 
       onMouseLeave={() => setIsHovered(false)}
     >
