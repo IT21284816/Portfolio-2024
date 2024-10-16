@@ -8,6 +8,7 @@ import { Languages } from "./components/Languages";
 import { Projects } from "./components/Projects";
 import { Contact } from "./components/Contact";
 import { Footer } from "./components/Footer";
+import { Education } from "./components/Education"
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
       <Banner />
       <Skills />
       <Languages />
+      <Education />
       <Projects />
       <Contact />
       <Footer />
