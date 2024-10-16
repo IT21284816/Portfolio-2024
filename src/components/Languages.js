@@ -37,10 +37,11 @@ const skills = [
     { name: "Razor" },
     { name: "Power BI" },
     { name: "Fedora" },
-    { name: "CentOS 7" },  
+    { name: "CentOS 7" },
+  
 ];
 
-export const SkillsCopy = () => {
+export const Languages = () => {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
@@ -54,7 +55,7 @@ export const SkillsCopy = () => {
         <div className="row">
           <div className="col-12">
             <div className="skill-bx wow zoomIn">
-              <h2 className='mb-3'>Skills</h2>
+              <h2 className='mb-5'>Languages & Web Technologies</h2>
               <div className="row">
                 {skills.map((skill, index) => (
                   <div className="col-md-2 mb-4" key={index}>
@@ -63,9 +64,9 @@ export const SkillsCopy = () => {
                       animate={{ opacity: isHovered ? 1 : 0.5, y: isHovered ? 0 : 20 }} // Change opacity and position on hover
                       transition={{ duration: 0.5, delay: index * 0.1 }}
                     >
-                      <Card style={{ width: '140px', borderRadius: '15px', textAlign: 'center' }}>
+                      <Card style={{ width: '100%', borderRadius: '15px', textAlign: 'center' }}>
                         <Card.Body>
-                          <Card.Title className='mt-2'>{skill.name}</Card.Title>
+                          <Card.Title style={{ fontSize: '0.9rem' }} className='mt-2'>{skill.name}</Card.Title>
                           
                         </Card.Body>
                       </Card>
@@ -83,4 +84,4 @@ export const SkillsCopy = () => {
   );
 };
 
-export default SkillsCopy;
+export default Languages;
