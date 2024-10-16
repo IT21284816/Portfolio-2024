@@ -40,11 +40,12 @@ export const SkillsCopy = () => {
                       transition={{ duration: 0.5, delay: index * 0.1 }}
                     >
                       <Card style={{ width: '140px', borderRadius: '15px', textAlign: 'center' }}>
-                          <Card.Body>
-                            <Card.Title>{skill.name}</Card.Title>
-                            <Card.Text></Card.Text>
-                          </Card.Body>
-                        </Card>
+                        <Card.Body>
+                          <Card.Title className='mt-2'>{skill.name}</Card.Title>
+                          
+                        </Card.Body>
+                      </Card>
+
                     </motion.div>
                   </div>
                 ))}
