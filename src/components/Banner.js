@@ -61,7 +61,7 @@ export const Banner = () => {
                   <br></br>
                   <p>A dedicated, hardworking and creative person with good academic qualifications who seeks to work for an organization which provides me the opportunity to improve
                      my skills and knowledge to growth along with the organizations objective. Looking forward to utilize the skills obtained from my academic background into practice 
-                     by working on projects related to Information Technology field. My aim is to become an effective individual and professional in IT Sector.</p>
+                     by working on projects related to Information Technology field. My aim is to become an effective individual and professional in IT Sector...</p>
                   <button onClick={() => console.log('connect')}>Let’s Connect <ArrowRightCircle size={25} /></button>
               </div>}
             </TrackVisibility>
