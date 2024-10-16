@@ -64,14 +64,15 @@ export const Banner = () => {
                      by working on projects related to Information Technology field. My aim is to become an effective individual and professional in IT Sector...</p>
                   <button onClick={() => console.log('connect')}>Let’s Connect <ArrowRightCircle size={25} /></button>
               </div>}
+              
             </TrackVisibility>
           </Col>
           <Col xs={12} md={6} xl={5}>
             <TrackVisibility>
               {({ isVisible }) =>
                 <div className={isVisible ? "animate__animated animate__zoomIn" : ""}>
-                  <img src={headerImg} alt="Header Img"/>   
-                </div>}
+                  <img src={headerImg} alt="Header Img"/>                                                   
+                </div>}                     
             </TrackVisibility>
           </Col>
         </Row>
