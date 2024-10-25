@@ -9,6 +9,7 @@ import { Projects } from "./components/Projects";
 import { Contact } from "./components/Contact";
 import { Footer } from "./components/Footer";
 import { Education } from "./components/Education"
+import { Project } from "./components/Project";
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
       <Skills />
       <Languages />
       <Education />
+      <Project/>
       <Projects />
       <Contact />
       <Footer />
