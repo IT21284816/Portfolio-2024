@@ -18,9 +18,8 @@ import kotlinImg from "../assets/icons/kotlin.png";
 import rImg from "../assets/icons/r.png"; 
 import typescriptImg from "../assets/icons/typescript.png"; // Add the correct path
 import nextjsImg from "../assets/icons/nextjs.png"; // Add the correct path
-import wordpressImg from "../assets/icons/wordpress.png"; // Add the correct path
-import bootstrapImg from "../assets/icons/bootstrap.png"; // Add the correct path
-import tailwindImg from "../assets/icons/tailwind.png"; // Add the correct path
+import wordpressImg from "../assets/icons/wordpress.png"; 
+import bootstrapImg from "../assets/icons/bootstrap.png";
 import reactNativeImg from "../assets/icons/react-native.png"; // Add the correct path
 import mysqlImg from "../assets/icons/mysql.png"; // Add the correct path
 import mongodbImg from "../assets/icons/mongodb.png"; // Add the correct path
