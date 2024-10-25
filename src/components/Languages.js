@@ -68,7 +68,7 @@ const skills = [
     { name: "VMware", image: vmwareImg },
     { name: "Git", image: gitImg },
     { name: "Stripe", image: stripeImg },
-    { name: "Razor", image: razorImg },
+    { name: "Razor Pay", image: razorImg },
     { name: "Power BI", image: powerBIImg },
     { name: "Fedora", image: fedoraImg },
     { name: "CentOS 7", image: centosImg },
