@@ -24,12 +24,12 @@ import reactNativeImg from "../assets/icons/react-native.png"; // Add the correc
 import mysqlImg from "../assets/icons/mysql.png"; 
 import mongodbImg from "../assets/icons/mongodb.png"; 
 import firebaseImg from "../assets/icons/firebase.png"; 
-import oracleImg from "../assets/icons/oracle.png"; // Add the correct path
-import azureImg from "../assets/icons/azure.png"; // Add the correct path
-import androidStudioImg from "../assets/icons/android-studio.png"; // Add the correct path
-import iotImg from "../assets/icons/iot.png"; // Add the correct path
-import arduinoImg from "../assets/icons/arduino.png"; // Add the correct path
-import vmwareImg from "../assets/icons/vmware.png"; // Add the correct path
+import oracleImg from "../assets/icons/oracle.png";
+import azureImg from "../assets/icons/azure.png";
+import androidStudioImg from "../assets/icons/android-studio.png"; 
+import iotImg from "../assets/icons/iot.png"; 
+import arduinoImg from "../assets/icons/arduino.png";
+import vmwareImg from "../assets/icons/vmware.png"; 
 import gitImg from "../assets/icons/git.png"; // Add the correct path
 import stripeImg from "../assets/icons/stripe.png"; // Add the correct path
 import razorImg from "../assets/icons/razor.png"; // Add the correct path
