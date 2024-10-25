@@ -16,11 +16,12 @@ import csharpImg from "../assets/icons/csharp.png";
 import pythonImg from "../assets/icons/python.png"; 
 import kotlinImg from "../assets/icons/kotlin.png";
 import rImg from "../assets/icons/r.png"; 
-import typescriptImg from "../assets/icons/typescript.png"; // Add the correct path
-import nextjsImg from "../assets/icons/nextjs.png"; // Add the correct path
+import typescriptImg from "../assets/icons/typescript.png"; 
+import nextjsImg from "../assets/icons/nextjs.png"; 
 import wordpressImg from "../assets/icons/wordpress.png"; 
 import bootstrapImg from "../assets/icons/bootstrap.png";
-import reactNativeImg from "../assets/icons/react-native.png"; // Add the correct path
+import tailwindImg from "../assets/icons/tailwind.png"
+import reactNativeImg from "../assets/icons/react-native.png"; 
 import mysqlImg from "../assets/icons/mysql.png"; 
 import mongodbImg from "../assets/icons/mongodb.png"; 
 import firebaseImg from "../assets/icons/firebase.png"; 
