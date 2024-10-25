@@ -30,12 +30,12 @@ import androidStudioImg from "../assets/icons/android-studio.png";
 import iotImg from "../assets/icons/iot.png"; 
 import arduinoImg from "../assets/icons/arduino.png";
 import vmwareImg from "../assets/icons/vmware.png"; 
-import gitImg from "../assets/icons/git.png"; // Add the correct path
-import stripeImg from "../assets/icons/stripe.png"; // Add the correct path
-import razorImg from "../assets/icons/razor.png"; // Add the correct path
-import powerBIImg from "../assets/icons/power-bi.png"; // Add the correct path
-import fedoraImg from "../assets/icons/fedora.png"; // Add the correct path
-import centosImg from "../assets/icons/centos.png"; // Add the correct path
+import gitImg from "../assets/icons/git.png"; 
+import stripeImg from "../assets/icons/stripe.png"; 
+import razorImg from "../assets/icons/razor.png"; 
+import powerBIImg from "../assets/icons/power-bi.png"; 
+import fedoraImg from "../assets/icons/fedora.png"; 
+import centosImg from "../assets/icons/centos.png";
 
 const skills = [
     { name: "Java", image: javaImg },
