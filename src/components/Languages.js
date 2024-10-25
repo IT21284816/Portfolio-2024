@@ -14,7 +14,7 @@ import cImg from "../assets/icons/c.png";
 import cppImg from "../assets/icons/cpp.png"; 
 import csharpImg from "../assets/icons/csharp.png"; 
 import pythonImg from "../assets/icons/python.png"; 
-import kotlinImg from "../assets/icons/kotlin.png"; // Add the correct path
+import kotlinImg from "../assets/icons/kotlin.png";
 import rImg from "../assets/icons/r.png"; 
 import typescriptImg from "../assets/icons/typescript.png"; // Add the correct path
 import nextjsImg from "../assets/icons/nextjs.png"; // Add the correct path
