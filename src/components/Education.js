@@ -1,6 +1,9 @@
 import 'react-multi-carousel/lib/styles.css';
+import 'react-vertical-timeline-component/style.min.css';
 import colorSharp from "../assets/img/color-sharp.png";
 import { motion } from 'framer-motion';
+import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
+import { FaGraduationCap } from 'react-icons/fa'; // You can use any icon you prefer
 
 const educationData = [
   {
@@ -13,6 +16,11 @@ const educationData = [
       institution: "ABC University",
       year: "2022 - 2024",
   },
+  {
+    degree: "Master of Science in Software Engineering",
+    institution: "ABC University",
+    year: "2022 - 2024",
+},
   // Add more education entries as needed
 ];
 
@@ -29,44 +37,38 @@ export const Education = () => {
             id="education"
             style={{ marginTop: '10%' }}
         >
-            <div className="container" >
-                <div className="row" >
-                    <div className="col-12" >
+            <div className="container">
+                <div className="row">
+                    <div className="col-12">
                         <motion.div
                             className="skill-bx wow zoomIn"
                             initial="hidden"
                             whileInView="visible"
                             variants={variants}
-                            transition={{ duration: 0.8 }} // Adjust the duration as needed
+                            transition={{ duration: 0.8 }}
                             style={{
                               background: 'radial-gradient(75% 63.6% at 50% 2.5%, rgb(36, 115, 236) 0%, rgba(99, 102, 241, 0) 100%)'
                           }}
                         >
-                            <h2>Education</h2>
-                            <div className="row">
-                                {educationData.map((edu, index) => (
-                                    <div className="col-md-6 col-lg-4 mb-4" key={index}>
-                                        <motion.div
-                                            className="card"
-                                            initial="hidden"
-                                            whileInView="visible"
-                                            variants={variants}
-                                            transition={{ duration: 0.8, delay: index * 0.2 }}
-                                            style={{
-                                                background: 'white',
-                                                borderRadius: '8px',
-                                                boxShadow: '0 4px 8px rgba(0,0,0,0.1)',
-                                                padding: '15px'
-                                            }}
-                                        >
-                                            <h4>{edu.degree}</h4>
-                                            <p><strong>{edu.institution}</strong></p>
-                                            <p>{edu.year}</p>
-                                        </motion.div>
-                                    </div>
-                                ))}
+                            <h2 style={{ marginBottom: '5%' }}>Education</h2>
+                            <div >
+                            <VerticalTimeline>
+                              {educationData.map((education, index) => (
+                                <VerticalTimelineElement
+                                  key={index}
+                                  className="vertical-timeline-element--education"
+                                  date={education.year}
+                                  iconStyle={{ background: 'rgb(36, 115, 236)', color: '#fff' }} // Change icon color here
+                                  contentStyle={{ background: 'radial-gradient(75% 63.6% at 50% 2.5%, rgb(36, 115, 236) 0%, rgba(99, 102, 241, 0) 100%)', color: '#fff' }} // Change content background color here
+                                  icon={<FaGraduationCap />}
+                                >
+                                  <h3 className="vertical-timeline-element-title">{education.degree}</h3>
+                                  <h4 className="vertical-timeline-element-subtitle">{education.institution}</h4>
+                                </VerticalTimelineElement>
+                              ))}
+                            </VerticalTimeline>
                             </div>
-                            </motion.div>
+                        </motion.div>
                     </div>
                 </div>
             </div>
