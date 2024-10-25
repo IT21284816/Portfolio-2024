@@ -85,7 +85,8 @@ export const Languages = () => {
 
   return (
     <section 
-      className="skill mt-5" id="languages" 
+      className="skill" id="languages" 
+      style={{ marginTop: '10%' }}
     >
       <div className="container">
         <div className="row">
@@ -95,11 +96,14 @@ export const Languages = () => {
               initial="hidden" 
               whileInView="visible" 
               variants={variants}
-              transition={{ duration: 0.8 }}// Adjust the duration as needed
+              transition={{ duration: 0.8 }}
+              style={{
+                background: 'radial-gradient(75% 20% at 50% 2.5%, rgb(36, 115, 236) 0%, rgba(99, 102, 241, 0) 100%)'
+            }}
             >
-            <div className="skill-bx">
+            
               <h2 className='mb-5'>Languages & Web Technologies</h2>
-              <div className="row">
+              <div className="row" >
                 {skills.map((skill, index) => (
                   <div className="col-md-2 mb-4" key={index}>
                     <Card style={{
@@ -118,7 +122,7 @@ export const Languages = () => {
                   </div>
                 ))}
               </div>
-            </div>
+            
             </motion.div>
           </div>
         </div>
