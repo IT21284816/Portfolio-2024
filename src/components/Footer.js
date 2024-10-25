@@ -7,8 +7,8 @@ import navIcon3 from "../assets/img/nav-icon3.svg";
 
 export const Footer = () => {
   return (
-    <footer className="footer">
-      <Container>
+    <footer className="footer" >
+      <Container >
         <Row className="align-items-center">
           <MailchimpForm />
           <Col size={12} sm={6}>

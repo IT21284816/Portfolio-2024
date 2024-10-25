@@ -7,19 +7,19 @@ import { FaGraduationCap } from 'react-icons/fa'; // You can use any icon you pr
 
 const educationData = [
   {
-      degree: "Bachelor of Science in Computer Science",
-      institution: "XYZ University",
-      year: "2018 - 2022",
+      degree: "BSc (Hons) in Information Technology Specialising in Information Technology",
+      institution: "Sri Lanka Institute of Information Technology",
+      year: "2021 - 2025",
   },
   {
-      degree: "Master of Science in Software Engineering",
-      institution: "ABC University",
-      year: "2022 - 2024",
+      degree: "GCE Advanced Level",
+      institution: "Sri Devananda College",
+      year: "2018 - 2020",
   },
   {
-    degree: "Master of Science in Software Engineering",
-    institution: "ABC University",
-    year: "2022 - 2024",
+    degree: "GCE Ordinary Level",
+    institution: "Sri Devananda College",
+    year: "2012 - 2017",
 },
   // Add more education entries as needed
 ];
@@ -47,10 +47,10 @@ export const Education = () => {
                             variants={variants}
                             transition={{ duration: 0.8 }}
                             style={{
-                              background: 'radial-gradient(75% 63.6% at 50% 2.5%, rgb(36, 115, 236) 0%, rgba(99, 102, 241, 0) 100%)'
+                              background: 'radial-gradient(75% 20% at 50% 2.5%, rgb(36, 115, 236) 0%, rgba(99, 102, 241, 0) 100%)'
                           }}
                         >
-                            <h2 style={{ marginBottom: '5%' }}>Education</h2>
+                            <h2 style={{ marginBottom: '8%' }}>Education</h2>
                             <div >
                             <VerticalTimeline>
                               {educationData.map((education, index) => (
@@ -59,11 +59,16 @@ export const Education = () => {
                                   className="vertical-timeline-element--education"
                                   date={education.year}
                                   iconStyle={{ background: 'rgb(36, 115, 236)', color: '#fff' }} // Change icon color here
-                                  contentStyle={{ background: 'radial-gradient(75% 63.6% at 50% 2.5%, rgb(36, 115, 236) 0%, rgba(99, 102, 241, 0) 100%)', color: '#fff' }} // Change content background color here
+
+                                  contentStyle={{ background: 'radial-gradient(75% 63.6% at 50% 2.5%, rgb(36, 115, 236) 0%, rgba(99, 102, 241, 0) 100%)', 
+                                                
+                                                borderRadius: '20px',
+                                              }}
                                   icon={<FaGraduationCap />}
                                 >
-                                  <h3 className="vertical-timeline-element-title">{education.degree}</h3>
-                                  <h4 className="vertical-timeline-element-subtitle">{education.institution}</h4>
+                                  <h5 className="vertical-timeline-element-title">{education.degree}</h5>
+                                  <br></br>
+                                  <h6 className="vertical-timeline-element-subtitle">{education.institution}</h6>
                                 </VerticalTimelineElement>
                               ))}
                             </VerticalTimeline>
