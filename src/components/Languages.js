@@ -21,9 +21,9 @@ import nextjsImg from "../assets/icons/nextjs.png"; // Add the correct path
 import wordpressImg from "../assets/icons/wordpress.png"; 
 import bootstrapImg from "../assets/icons/bootstrap.png";
 import reactNativeImg from "../assets/icons/react-native.png"; // Add the correct path
-import mysqlImg from "../assets/icons/mysql.png"; // Add the correct path
-import mongodbImg from "../assets/icons/mongodb.png"; // Add the correct path
-import firebaseImg from "../assets/icons/firebase.png"; // Add the correct path
+import mysqlImg from "../assets/icons/mysql.png"; 
+import mongodbImg from "../assets/icons/mongodb.png"; 
+import firebaseImg from "../assets/icons/firebase.png"; 
 import oracleImg from "../assets/icons/oracle.png"; // Add the correct path
 import azureImg from "../assets/icons/azure.png"; // Add the correct path
 import androidStudioImg from "../assets/icons/android-studio.png"; // Add the correct path
