@@ -21,8 +21,7 @@ export const Skills = () => {
   };
 
   return (
-    <section className="skill" id="skills"
-    style={{ marginTop: '10%' }}
+    <section className="skill mt-5 mb-5" id="skills"
     >
       <div className="container">
         <div className="row">

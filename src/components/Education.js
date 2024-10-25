@@ -2,6 +2,20 @@ import 'react-multi-carousel/lib/styles.css';
 import colorSharp from "../assets/img/color-sharp.png";
 import { motion } from 'framer-motion';
 
+const educationData = [
+  {
+      degree: "Bachelor of Science in Computer Science",
+      institution: "XYZ University",
+      year: "2018 - 2022",
+  },
+  {
+      degree: "Master of Science in Software Engineering",
+      institution: "ABC University",
+      year: "2022 - 2024",
+  },
+  // Add more education entries as needed
+];
+
 export const Education = () => {
     // Define the scroll animations
     const variants = {
@@ -11,7 +25,7 @@ export const Education = () => {
 
     return (
         <section
-            className="skill mt-5"
+            className="skill mb-5"
             id="education"
             style={{ marginTop: '10%' }}
         >
@@ -29,8 +43,30 @@ export const Education = () => {
                           }}
                         >
                             <h2>Education</h2>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br /> Lorem Ipsum has been the industry's standard dummy text.</p>
-                        </motion.div>
+                            <div className="row">
+                                {educationData.map((edu, index) => (
+                                    <div className="col-md-6 col-lg-4 mb-4" key={index}>
+                                        <motion.div
+                                            className="card"
+                                            initial="hidden"
+                                            whileInView="visible"
+                                            variants={variants}
+                                            transition={{ duration: 0.8, delay: index * 0.2 }}
+                                            style={{
+                                                background: 'white',
+                                                borderRadius: '8px',
+                                                boxShadow: '0 4px 8px rgba(0,0,0,0.1)',
+                                                padding: '15px'
+                                            }}
+                                        >
+                                            <h4>{edu.degree}</h4>
+                                            <p><strong>{edu.institution}</strong></p>
+                                            <p>{edu.year}</p>
+                                        </motion.div>
+                                    </div>
+                                ))}
+                            </div>
+                            </motion.div>
                     </div>
                 </div>
             </div>
