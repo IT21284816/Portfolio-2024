@@ -3,6 +3,7 @@ import { MailchimpForm } from "./MailchimpForm";
 import logo from "../assets/img/logo.svg";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook, faTwitter, faInstagram, faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
+import { motion } from 'framer-motion';
 
 export const Footer = () => {
   const footerStyle = {
@@ -33,6 +34,11 @@ export const Footer = () => {
     minHeight: "100vh",
   };
 
+  const variants = {
+    hidden: { opacity: 0, y: 100 },
+    visible: { opacity: 1, y: 0 }
+  };
+
   return (
     <div style={containerStyle}>
       {/* Your main content goes here */}
@@ -40,7 +46,15 @@ export const Footer = () => {
       <footer className="footer" style={footerStyle}>
       
         <Container>
+        <motion.div 
+              
+              initial="hidden" 
+              whileInView="visible" 
+              variants={variants}
+              transition={{ duration: 0.8 }}
+               >
           <MailchimpForm />
+          </motion.div>
           <Row className="align-items-center">
             
             <Col size={12} sm={6}>
