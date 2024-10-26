@@ -21,8 +21,7 @@ function App() {
       <Languages />
       <Education />
       <Project/>
-      <Projects />
-      <Contact />
+      
       <Footer />
     </div>
   );
