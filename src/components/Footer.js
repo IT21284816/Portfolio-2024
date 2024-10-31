@@ -40,11 +40,19 @@ export const Footer = () => {
   };
 
   const copyrightVariants = {
-    hidden: { opacity: 0, x: -300 },
-    visible: { opacity: 1, x: 0 }
+    hidden: { opacity: 0, y: -75 },
+    visible: { opacity: 1, y: 0 }
   };
   const socialIcons = {
     hidden: { opacity: 0, x: 500 },
+    visible: { opacity: 1, x: 0 }
+  };
+  const line = {
+    hidden: { opacity: 0, y: 75 },
+    visible: { opacity: 0.75, y: 0 }
+  };
+  const logo = {
+    hidden: { opacity: 0, x: -500 },
     visible: { opacity: 1, x: 0 }
   };
 
@@ -64,7 +72,9 @@ export const Footer = () => {
           </motion.div>
           <Row className="align-items-center">
             <Col size={12} sm={6}>
+            <motion.p initial="hidden" whileInView="visible" variants={logo} transition={{ duration: 0.8 }}>
               <img src={logo} alt="Logo" />
+              </motion.p>
             </Col>
             <Col size={12} sm={6} className="text-center text-sm-end">
             <motion.p initial="hidden" whileInView="visible" variants={socialIcons} transition={{ duration: 0.8 }}>
@@ -79,13 +89,10 @@ export const Footer = () => {
             </Col>
           </Row>
           <div style={copyrightStyle}>
+          <motion.p initial="hidden" whileInView="visible" variants={line} transition={{ duration: 0.5 }}>
             <div style={lineStyle} />
-            <motion.p 
-              initial="hidden" 
-              whileInView="visible" 
-              variants={copyrightVariants}
-              transition={{ duration: 0.8 }}
-            >
+            </motion.p>
+            <motion.p initial="hidden" whileInView="visible" variants={copyrightVariants} transition={{ duration: 0.8 }}>
               Copyright 2024. All Rights Reserved
             </motion.p>
           </div>
