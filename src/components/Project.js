@@ -58,7 +58,7 @@ export const Project = () => {
   };
 
   return (
-    <section className="skill mb-5" id="project" style={{ marginTop: '10%' }}>
+    <section className="skill" id="project" style={{ marginTop: '10%', marginBottom:'-10%' }}>
       <div className="container">
         <div className="row">
           <div className="col-12">

@@ -11,8 +11,8 @@ export const Footer = () => {
     background: 'radial-gradient(75% 63.6% at 50% 2.5%, rgb(36, 115, 236) 0%, rgba(99, 102, 241, 0) 100%)',
     padding: "20px 0",
     textAlign: "center", 
-    borderTopLeftRadius: "100px",  
-    borderTopRightRadius: "100px",
+    borderTopLeftRadius: "500px",  
+    borderTopRightRadius: "500px",
   };
 
   const copyrightStyle = {
@@ -36,7 +36,16 @@ export const Footer = () => {
 
   const variants = {
     hidden: { opacity: 0, y: 100 },
-    visible: { opacity: 1, y: 0 }
+    visible: { opacity: 1, y: -50 }
+  };
+
+  const copyrightVariants = {
+    hidden: { opacity: 0, x: -300 },
+    visible: { opacity: 1, x: 0 }
+  };
+  const socialIcons = {
+    hidden: { opacity: 0, x: 500 },
+    visible: { opacity: 1, x: 0 }
   };
 
   return (
@@ -44,23 +53,21 @@ export const Footer = () => {
       {/* Your main content goes here */}
       
       <footer className="footer" style={footerStyle}>
-      
         <Container>
-        <motion.div 
-              
-              initial="hidden" 
-              whileInView="visible" 
-              variants={variants}
-              transition={{ duration: 0.8 }}
-               >
-          <MailchimpForm />
+          <motion.div 
+            initial="hidden" 
+            whileInView="visible" 
+            variants={variants}
+            transition={{ duration: 0.8 }}
+          >
+            <MailchimpForm />
           </motion.div>
           <Row className="align-items-center">
-            
             <Col size={12} sm={6}>
               <img src={logo} alt="Logo" />
             </Col>
             <Col size={12} sm={6} className="text-center text-sm-end">
+            <motion.p initial="hidden" whileInView="visible" variants={socialIcons} transition={{ duration: 0.8 }}>
               <div className="social-icon">
                 <a href="#"><FontAwesomeIcon icon={faFacebook} size="lg" /></a>
                 <a href="#"><FontAwesomeIcon icon={faTwitter} size="lg" /></a>
@@ -68,14 +75,22 @@ export const Footer = () => {
                 <a href="#"><FontAwesomeIcon icon={faLinkedin} size="lg" /></a>
                 <a href="#"><FontAwesomeIcon icon={faGithub} size="lg" /></a>
               </div>
+              </motion.p>
             </Col>
           </Row>
           <div style={copyrightStyle}>
             <div style={lineStyle} />
-            <p>Copyright 2024. All Rights Reserved</p>
+            <motion.p 
+              initial="hidden" 
+              whileInView="visible" 
+              variants={copyrightVariants}
+              transition={{ duration: 0.8 }}
+            >
+              Copyright 2024. All Rights Reserved
+            </motion.p>
           </div>
         </Container>
       </footer>
     </div>
   );
-}
+};
