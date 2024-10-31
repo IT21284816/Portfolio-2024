@@ -1,6 +1,7 @@
-// src/components/WelcomePage.js
 import React, { useState } from 'react';
 import { Button } from 'react-bootstrap';
+import { motion } from 'framer-motion';
+
 
 const WelcomePage = ({ onStart }) => {
   const [fadeOut, setFadeOut] = useState(false);
@@ -32,11 +33,31 @@ const WelcomePage = ({ onStart }) => {
     setTimeout(onStart, 500); // Call onStart after animation duration
   };
 
+  const text1 = {
+    hidden: { opacity: 0, x: 200 },
+    visible: { opacity: 1, x: 0 }
+  };
+  const text2 = {
+    hidden: { opacity: 0, x: -200 },
+    visible: { opacity: 1, x: 0 }
+  };
+  const btn = {
+    hidden: { opacity: 0, y: 200 },
+    visible: { opacity: 1, y: 0 }
+  };
+
   return (
     <div style={welcomeStyle}>
-      <h1 style={headingStyle}>Welcome to My Portfolio</h1>
+        <motion.p initial="hidden" whileInView="visible" variants={text1} transition={{ duration: 1 }}>
+        <h1 style={headingStyle}>Welcome to My Portfolio</h1>
+        </motion.p>
+        <motion.p initial="hidden" whileInView="visible" variants={text2} transition={{ duration: 1 }}>
       <p style={paragraphStyle}>Explore my skills, projects, and more!</p>
+      </motion.p>
+      <motion.p initial="hidden" whileInView="visible" variants={btn} transition={{ duration: 1 }}>
       <Button variant="primary" onClick={handleStart}>Get Started</Button>
+      </motion.p>
+      
     </div>
   );
 };

@@ -4,6 +4,8 @@ import headerImg from "../assets/img/header-img.svg";
 import { ArrowRightCircle } from 'react-bootstrap-icons';
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
+import { motion } from 'framer-motion';
+
 
 export const Banner = () => {
   const [loopNum, setLoopNum] = useState(0);
@@ -47,6 +49,15 @@ export const Banner = () => {
     }
   }
 
+  const paragraph = {
+    hidden: { opacity: 0, x: 300 },
+    visible: { opacity: 1, x: 0 }
+  };
+  const topic = {
+    hidden: { opacity: 0, x: -300 },
+    visible: { opacity: 1, x: 0 }
+  };
+
   return (
     <section className="banner" id="home">
       <Container>
@@ -55,13 +66,16 @@ export const Banner = () => {
             <TrackVisibility>
               {({ isVisible }) =>
               <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
-                <span className="tagline">Welcome to my Portfolio</span>
+                <motion.p initial="hidden" whileInView="visible" variants={topic} transition={{ duration: 1 }}>                
                 <h1>{`Hi! I'm Duhun De Silva`} <br></br>
                   <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "Web Developer", "Web Designer", "UI/UX Designer" ]'><span className="wrap">{text}</span></span></h1>
+                  </motion.p>
                   <br></br>
+                  <motion.p initial="hidden" whileInView="visible" variants={paragraph} transition={{ duration: 1 }}>
                   <p>A dedicated, hardworking and creative person with good academic qualifications who seeks to work for an organization which provides me the opportunity to improve
                      my skills and knowledge to growth along with the organizations objective. Looking forward to utilize the skills obtained from my academic background into practice 
                      by working on projects related to Information Technology field. My aim is to become an effective individual and professional in IT Sector...</p>
+                     </motion.p>
                   <button onClick={() => console.log('connect')}>Let’s Connect <ArrowRightCircle size={25} /></button>
               </div>}
               
@@ -69,10 +83,9 @@ export const Banner = () => {
           </Col>
           <Col xs={12} md={6} xl={5}>
             <TrackVisibility>
-              {({ isVisible }) =>
-                <div className={isVisible ? "animate__animated animate__zoomIn" : ""}>
+              {({ isVisible }) =>                
                   <img src={headerImg} alt="Header Img"/>                                                   
-                </div>}                     
+                }                     
             </TrackVisibility>
           </Col>
         </Row>
