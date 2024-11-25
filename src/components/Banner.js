@@ -5,6 +5,7 @@ import { ArrowRightCircle } from 'react-bootstrap-icons';
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
 import { motion } from 'framer-motion';
+import colorSharp from "../assets/img/color-sharp.png";
 
 
 export const Banner = () => {
@@ -59,7 +60,9 @@ export const Banner = () => {
   };
 
   return (
-    <section className="banner" id="home">
+    <section className="banner" id="home" style={{ backgroundImage: `url(${colorSharp})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
+
+      
       <Container>
         <Row className="aligh-items-center">
           <Col xs={12} md={6} xl={7}>
@@ -90,6 +93,7 @@ export const Banner = () => {
           </Col>
         </Row>
       </Container>
+      
     </section>
   )
 }

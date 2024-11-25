@@ -15,9 +15,15 @@ function App() {
 
   useEffect(() => {
     const hasVisited = localStorage.getItem('hasVisited');
+    
     if (!hasVisited) {
       setIsWelcome(true);
       localStorage.setItem('hasVisited', 'true');
+      
+      // Set a timeout to reset 'hasVisited' after 1 hour (3600000 ms)
+      setTimeout(() => {
+        localStorage.removeItem('hasVisited');
+      }, 3600000); // 1 hour in milliseconds
     }
   }, []);
 
