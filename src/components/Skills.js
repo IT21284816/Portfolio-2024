@@ -20,6 +20,16 @@ export const Skills = () => {
     visible: { opacity: 1, y: 0 }
   };
 
+  const topic = {
+    hidden: { opacity: 0, x: -300 },
+    visible: { opacity: 1, x: 0 }
+  };
+
+  const skills = {
+    hidden: { opacity: 0, x: 300 },
+    visible: { opacity: 1, x: 0 }
+  };
+
   return (
     <section className="skill mt-5 mb-5" id="skills"
     >
@@ -36,8 +46,10 @@ export const Skills = () => {
                 background: 'radial-gradient(75% 63.6% at 50% 2.5%, rgb(36, 115, 236) 0%, rgba(99, 102, 241, 0) 100%)'
             }}
             >
+              <motion.p initial="hidden" whileInView="visible" variants={topic} transition={{ duration: 1 }}>
               <h2>Skills</h2>
-              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br /> Lorem Ipsum has been the industry's standard dummy text.</p>
+              </motion.p>
+              <motion.p initial="hidden" whileInView="visible" variants={skills} transition={{ duration: 1 }}>
               <Carousel
                 responsive={responsive}
                 infinite={true}
@@ -78,7 +90,8 @@ export const Skills = () => {
                   <h5>Back-End Development</h5>
                 </div>
               </Carousel>
-            </motion.div>
+              </motion.p>
+            </motion.div>            
           </div>
         </div>
       </div>
