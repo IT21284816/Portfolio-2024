@@ -85,6 +85,10 @@ export const Languages = () => {
     hidden: { opacity: 0, x: -300 },
     visible: { opacity: 1, x: 0 }
   };
+  const list = {
+    hidden: { opacity: 0, x: 300 },
+    visible: { opacity: 1, x: 0 }
+  };
 
   return (
     <section 
@@ -107,7 +111,7 @@ export const Languages = () => {
             <motion.p initial="hidden" whileInView="visible" variants={topic} transition={{ duration: 1 }}>
               <h2 className='mb-5'>Languages & Web Technologies</h2>
               </motion.p>
-              <motion.p initial="hidden" whileInView="visible" variants={topic} transition={{ duration: 1 }}>
+              <motion.p initial="hidden" whileInView="visible" variants={list} transition={{ duration: 1 }}>
               <div className="row" >
                 {skills.map((skill, index) => (
                   <div className="col-md-2 mb-4" key={index}>
