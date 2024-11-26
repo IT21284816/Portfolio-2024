@@ -1,6 +1,5 @@
 import 'react-multi-carousel/lib/styles.css';
 import 'react-vertical-timeline-component/style.min.css';
-import colorSharp from "../assets/img/color-sharp.png";
 import { motion } from 'framer-motion';
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
 import { FaGraduationCap } from 'react-icons/fa'; // You can use any icon you prefer
@@ -83,8 +82,7 @@ export const Education = () => {
                         </motion.div>
                     </div>
                 </div>
-            </div>
-            <img className="background-image-left" src={colorSharp} alt="Colorful background" />
+            </div>            
         </section>
     );
 };

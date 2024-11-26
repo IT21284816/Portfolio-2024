@@ -1,7 +1,5 @@
 import 'react-multi-carousel/lib/styles.css';
-import colorSharp from "../assets/img/color-sharp.png";
 import { Card } from 'react-bootstrap';
-import { useState } from 'react';
 import { motion } from 'framer-motion';
 // Import icons
 import javaImg from "../assets/icons/java.png";
@@ -135,8 +133,7 @@ export const Languages = () => {
             </motion.div>
           </div>
         </div>
-      </div>
-      <img className="background-image-left" src={colorSharp} alt="Colorful background" />
+      </div>      
     </section>
   );
 };

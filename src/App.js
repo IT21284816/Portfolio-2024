@@ -23,7 +23,7 @@ function App() {
       // Set a timeout to reset 'hasVisited' after 1 hour (3600000 ms)
       setTimeout(() => {
         localStorage.removeItem('hasVisited');
-      }, 3600000); // 1 hour in milliseconds
+      }, 36); // 1 hour in milliseconds
     }
   }, []);
 
