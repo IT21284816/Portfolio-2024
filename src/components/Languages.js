@@ -35,6 +35,8 @@ import razorImg from "../assets/icons/razor.png";
 import powerBIImg from "../assets/icons/power-bi.png"; 
 import fedoraImg from "../assets/icons/fedora.png"; 
 import centosImg from "../assets/icons/centos.png";
+import dlimg from "../assets/icons/dl.png";
+
 
 const skills = [
     { name: "Java", image: javaImg },
@@ -70,6 +72,7 @@ const skills = [
     { name: "Power BI", image: powerBIImg },
     { name: "Fedora", image: fedoraImg },
     { name: "CentOS 7", image: centosImg },
+    { name: "Deep Learning", image: dlimg },
 ];
 
 
