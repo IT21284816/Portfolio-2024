@@ -57,9 +57,8 @@ export const Footer = () => {
   };
 
   return (
-    <div style={containerStyle}>
-      {/* Your main content goes here */}
-      
+    <section id="footer">
+    <div style={containerStyle}>      
       <footer className="footer" style={footerStyle}>
         <Container>
           <motion.div 
@@ -98,6 +97,6 @@ export const Footer = () => {
           </div>
         </Container>
       </footer>
-    </div>
+    </div></section>
   );
 };

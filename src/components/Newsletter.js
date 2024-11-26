@@ -23,12 +23,7 @@ export const Newsletter = ({ status, message, onValidated }) => {
 
   return (
       <Col lg={12}>
-        <div
-  className="newsletter-bx wow slideInUp"
-  style={{ background: 'radial-gradient(75% 63.6% at 50% 10%, black 50%, rgba(99, 102, 241, 0) 150%)', 
-          color: 'white',
-  }}
->
+        <div className="newsletter-bx wow slideInUp" style={{ background: 'radial-gradient(75% 63.6% at 50% 10%, black 50%, rgba(99, 102, 241, 0) 150%)', color: 'white',}}>
 
           <Row>
             <Col lg={12} md={6} xl={5}>

@@ -60,6 +60,10 @@ export const Project = () => {
     hidden: { opacity: 0, x: -300 },
     visible: { opacity: 1, x: 0 }
   };
+  const list = {
+    hidden: { opacity: 0, x: 300 },
+    visible: { opacity: 1, x: 0 }
+  };
 
   return (
     <section className="skill" id="project" style={{ marginTop: '10%', marginBottom:'-10%' }}>
@@ -78,7 +82,8 @@ export const Project = () => {
             >
               <motion.p initial="hidden" whileInView="visible" variants={topic} transition={{ duration: 1 }}>
               <h2>Projects</h2>
-              </motion.p>              
+              </motion.p> 
+              <motion.p initial="hidden" whileInView="visible" variants={list} transition={{ duration: 1 }}>            
               <div className="row" style={{ marginTop: '10%' }}>
                 {projects.map((project, index) => (
                   <div key={index} className="col-md-4 mb-5">
@@ -116,6 +121,7 @@ export const Project = () => {
                   </div>
                 ))}
               </div>
+              </motion.p> 
             </motion.div>
           </div>
         </div>
