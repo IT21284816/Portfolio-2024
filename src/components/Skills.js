@@ -3,7 +3,6 @@ import meter2 from "../assets/img/meter2.svg";
 import meter3 from "../assets/img/meter3.svg";
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
-import colorSharp from "../assets/img/color-sharp.png";
 import { motion } from 'framer-motion';
 
 export const Skills = () => {
@@ -94,8 +93,7 @@ export const Skills = () => {
             </motion.div>            
           </div>
         </div>
-      </div>
-      <img className="background-image-left" src={colorSharp} alt="Colorful background" />
+      </div>      
     </section>
   );
 };
