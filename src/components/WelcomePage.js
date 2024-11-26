@@ -1,10 +1,74 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Button } from 'react-bootstrap';
-import { motion } from 'framer-motion';
-
+import Vara from 'vara';
 
 const WelcomePage = ({ onStart }) => {
+  const [fontSize, setFontSize] = useState(72);
   const [fadeOut, setFadeOut] = useState(false);
+
+  useEffect(() => {
+    // Adjust fontSize based on screen width
+    const handleResize = () => {
+      if (window.innerWidth < 700) {
+        setFontSize(32);
+      } else if (window.innerWidth < 1200) {
+        setFontSize(56);
+      } else {
+        setFontSize(50);
+      }
+    };
+
+    // Initialize on mount
+    handleResize();
+
+    // Listen for window resize to update font size
+    window.addEventListener('resize', handleResize);
+
+    // Cleanup listener on unmount
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
+  useEffect(() => {
+    // Cleanup existing Vara instance before reinitializing
+    const container = document.getElementById('container');
+    if (container) {
+      container.innerHTML = ''; // Clear any existing content to avoid duplicates
+    }
+
+    // Initialize Vara animation
+    const vara = new Vara(
+      "#container",
+      "https://cdn.jsdelivr.net/npm/vara@1.4.0/fonts/Satisfy/SatisfySL.json",
+      [
+        {
+          text: "Welcome to my Portfolio", // Corrected typo
+          color: "white",
+          id: "github"
+        }
+      ],
+      {
+        strokeWidth: 2,
+        color: "#523c33",
+        fontSize: fontSize, // Responsive font size
+        textAlign: "center"
+      }
+    );
+
+    vara.ready(() => {
+      vara.animationEnd(() => {
+        // Example: You can add interactivity here if needed
+      });
+    });
+
+    // Cleanup Vara on component unmount
+    return () => {
+      if (vara) {
+        container.innerHTML = ''; // Clear Vara content on unmount
+      }
+    };
+  }, [fontSize]); // Re-run Vara animation whenever fontSize changes
 
   const welcomeStyle = {
     display: 'flex',
@@ -13,19 +77,9 @@ const WelcomePage = ({ onStart }) => {
     justifyContent: 'center',
     height: '100vh',
     textAlign: 'center',
-    background: 'radial-gradient(75% 63.6% at 50% 2.5%, rgb(36, 115, 236) 0%, rgba(99, 102, 241, 0) 100%)', // Light background
-    transition: 'opacity 0.5s ease', // Smooth transition
-    opacity: fadeOut ? 0 : 1, // Change opacity based on fadeOut state
-  };
-
-  const headingStyle = {
-    fontSize: '3rem',
-    marginBottom: '20px',
-  };
-
-  const paragraphStyle = {
-    fontSize: '1.5rem',
-    marginBottom: '40px',
+    background: 'radial-gradient(75% 63.6% at 50% 2.5%, rgb(36, 115, 236) 0%, rgba(99, 102, 241, 0) 100%)',
+    transition: 'opacity 0.5s ease',
+    opacity: fadeOut ? 0 : 1,
   };
 
   const handleStart = () => {
@@ -33,31 +87,11 @@ const WelcomePage = ({ onStart }) => {
     setTimeout(onStart, 500); // Call onStart after animation duration
   };
 
-  const text1 = {
-    hidden: { opacity: 0, x: 200 },
-    visible: { opacity: 1, x: 0 }
-  };
-  const text2 = {
-    hidden: { opacity: 0, x: -200 },
-    visible: { opacity: 1, x: 0 }
-  };
-  const btn = {
-    hidden: { opacity: 0, y: 200 },
-    visible: { opacity: 1, y: 0 }
-  };
-
   return (
     <div style={welcomeStyle}>
-        <motion.p initial="hidden" whileInView="visible" variants={text1} transition={{ duration: 1 }}>
-        <h1 style={headingStyle}>Welcome to My Portfolio</h1>
-        </motion.p>
-        <motion.p initial="hidden" whileInView="visible" variants={text2} transition={{ duration: 1 }}>
-      <p style={paragraphStyle}>Explore my skills, projects, and more!</p>
-      </motion.p>
-      <motion.p initial="hidden" whileInView="visible" variants={btn} transition={{ duration: 1 }}>
-      <Button variant="primary" onClick={handleStart}>Get Started</Button>
-      </motion.p>
-      
+      {/* Single h1 element for Vara animation */}
+      <h1 id="container"></h1>
+      <Button className='mt-5' variant="primary" onClick={handleStart}>Get Started</Button>
     </div>
   );
 };
