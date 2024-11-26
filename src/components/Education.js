@@ -31,6 +31,11 @@ export const Education = () => {
         visible: { opacity: 1, y: 0 }
     };
 
+    const topic = {
+      hidden: { opacity: 0, x: -300 },
+      visible: { opacity: 1, x: 0 }
+    };
+
     return (
         <section
             className="skill mb-5"
@@ -50,7 +55,9 @@ export const Education = () => {
                               background: 'radial-gradient(75% 20% at 50% 2.5%, rgb(36, 115, 236) 0%, rgba(99, 102, 241, 0) 100%)'
                           }}
                         >
+                            <motion.p initial="hidden" whileInView="visible" variants={topic} transition={{ duration: 1 }}>                          
                             <h2 style={{ marginBottom: '8%' }}>Education</h2>
+                            </motion.p>
                             <div >
                             <VerticalTimeline>
                               {educationData.map((education, index) => (

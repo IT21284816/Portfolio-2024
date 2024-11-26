@@ -81,7 +81,10 @@ export const Languages = () => {
     hidden: { opacity: 0, y: 100 },
     visible: { opacity: 1, y: 0 }
   };
-
+  const topic = {
+    hidden: { opacity: 0, x: -300 },
+    visible: { opacity: 1, x: 0 }
+  };
 
   return (
     <section 
@@ -101,8 +104,10 @@ export const Languages = () => {
                 background: 'radial-gradient(75% 20% at 50% 2.5%, rgb(36, 115, 236) 0%, rgba(99, 102, 241, 0) 100%)'
             }}
             >
-            
+            <motion.p initial="hidden" whileInView="visible" variants={topic} transition={{ duration: 1 }}>
               <h2 className='mb-5'>Languages & Web Technologies</h2>
+              </motion.p>
+              <motion.p initial="hidden" whileInView="visible" variants={topic} transition={{ duration: 1 }}>
               <div className="row" >
                 {skills.map((skill, index) => (
                   <div className="col-md-2 mb-4" key={index}>
@@ -122,7 +127,7 @@ export const Languages = () => {
                   </div>
                 ))}
               </div>
-            
+              </motion.p>            
             </motion.div>
           </div>
         </div>
