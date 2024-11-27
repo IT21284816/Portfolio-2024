@@ -13,9 +13,9 @@ const WelcomePage = ({ onStart }) => {
       if (window.innerWidth < 700) {
         setFontSize(32);
       } else if (window.innerWidth < 1200) {
-        setFontSize(56);
+        setFontSize(50);
       } else {
-        setFontSize(60);
+        setFontSize(55);
       }
     };
 
@@ -41,12 +41,7 @@ const WelcomePage = ({ onStart }) => {
       "https://cdn.jsdelivr.net/npm/vara@1.4.0/fonts/Satisfy/SatisfySL.json",
       [
         {
-          text: "Welcome to my", 
-          color: "white",
-          id: "github"
-        },
-        {
-          text: "Portfolio", 
+          text: "Welcome to my Portfolio", 
           color: "white",
           id: "github"
         }
