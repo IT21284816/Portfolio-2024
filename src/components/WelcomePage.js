@@ -19,32 +19,29 @@ const WelcomePage = ({ onStart }) => {
       }
     };
 
-    // Initialize on mount
+   
     handleResize();
-
-    // Listen for window resize to update font size
+    
     window.addEventListener('resize', handleResize);
-
-    // Cleanup listener on unmount
+    
     return () => {
       window.removeEventListener('resize', handleResize);
     };
   }, []);
 
   useEffect(() => {
-    // Cleanup existing Vara instance before reinitializing
+    
     const container = document.getElementById('container');
     if (container) {
-      container.innerHTML = ''; // Clear any existing content to avoid duplicates
+      container.innerHTML = ''; 
     }
 
-    // Initialize Vara animation
     const vara = new Vara(
       "#container",
       "https://cdn.jsdelivr.net/npm/vara@1.4.0/fonts/Satisfy/SatisfySL.json",
       [
         {
-          text: "Welcome to my Portfolio", // Corrected typo
+          text: "Welcome to my Portfolio", 
           color: "white",
           id: "github"
         }
@@ -52,24 +49,23 @@ const WelcomePage = ({ onStart }) => {
       {
         strokeWidth: 2,
         color: "#523c33",
-        fontSize: fontSize, // Responsive font size
+        fontSize: fontSize,
         textAlign: "center"
       }
     );
 
     vara.ready(() => {
-      vara.animationEnd(() => {
-        // Example: You can add interactivity here if needed
+      vara.animationEnd(() => {        
       });
     });
 
-    // Cleanup Vara on component unmount
+    
     return () => {
       if (vara) {
-        container.innerHTML = ''; // Clear Vara content on unmount
+        container.innerHTML = ''; 
       }
     };
-  }, [fontSize]); // Re-run Vara animation whenever fontSize changes
+  }, [fontSize]); 
 
   const welcomeStyle = {
     display: 'flex',
@@ -77,14 +73,14 @@ const WelcomePage = ({ onStart }) => {
     justifyContent: 'center',
     height: '100vh',
     textAlign: 'center',
-    background: 'radial-gradient(55% 60% at 50% 2.5%, rgb(36, 115, 236) 0%, rgba(99, 102, 241, 0) 100%)',
+    background: 'radial-gradient(55% 50% at 50% 2.5%, rgb(36, 115, 236) 0%, rgba(99, 102, 241, 0) 100%)',
     transition: 'opacity 0.5s ease',
     opacity: fadeOut ? 0 : 1,
   };
 
   const handleStart = () => {
-    setFadeOut(true); // Trigger fade-out
-    setTimeout(onStart, 500); // Call onStart after animation duration
+    setFadeOut(true); 
+    setTimeout(onStart, 500);
   };
 
   const topic = {
@@ -93,8 +89,7 @@ const WelcomePage = ({ onStart }) => {
   };
 
   return (
-    <div style={welcomeStyle}>
-      {/* Single h1 element for Vara animation */}
+    <div style={welcomeStyle}>      
       <h1 id="container"></h1>
       <motion.p initial="hidden" whileInView="visible" variants={topic} transition={{ duration: 1 }}>
       <Button className='mt-5' variant="primary" onClick={handleStart}>Get Started</Button>
