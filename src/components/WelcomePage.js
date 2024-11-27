@@ -15,7 +15,7 @@ const WelcomePage = ({ onStart }) => {
       } else if (window.innerWidth < 1200) {
         setFontSize(56);
       } else {
-        setFontSize(50);
+        setFontSize(65);
       }
     };
 
