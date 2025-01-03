@@ -44,6 +44,11 @@ const WelcomePage = ({ onStart }) => {
           text: "Welcome to my Portfolio", 
           color: "white",
           id: "github"
+        },
+        {
+          text: "( Under Maintenance )", 
+          color: "Red",
+          id: "github"
         }
       ],
       {
